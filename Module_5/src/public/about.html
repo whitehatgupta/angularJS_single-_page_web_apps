@@ -1,0 +1,9 @@
+<div id="about-view" class="container">
+  <form name='infoForm' novalidate>
+      First Name : <input class="form-control" type="text" name="first_name" ng-model="$ctrl.first_name" required>
+      Second Name :<input type="text" name="second_name" ng-model="$ctrl.second_name" required>
+      E-mail :     <input type="email" name="email" ng-model="$ctrl.email" required>
+      Number :     <input type="number" name="ph_number" ng-model="$ctrl.ph_number" pattern="(\d{3})-(\d{3})-(\d{4})" required>
+      <button ng-disabled="infoForm.$invalid" ng-click="$ctrl.submit">Submit</button>{{infoForm.$invalid}}
+  </form>
+</div>
