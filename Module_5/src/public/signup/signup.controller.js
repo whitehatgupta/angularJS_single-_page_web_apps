@@ -19,7 +19,7 @@
                 return;
             }
 
-            MenuService.getFavoriteDish(vm.user.favoriteDish).then(function(response) {
+            MenuService.getFavoriteDish(vm.user.favoriteDish.toUpperCase()).then(function(response) {
                 vm.user.favoriteDishDetails = response.data;
                 console.log(vm.favoriteDish);
                 MenuService.saveUser(vm.user);
